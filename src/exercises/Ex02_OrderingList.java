@@ -10,7 +10,7 @@ import java.util.List;
 * e ordene esta lista exibindo:
 * (nome - idade - cor)
 *
-* Gato1 = nome: Jon, idade: 10, cor: preto
+* Gato1 = nome: Jon, idade: 18, cor: preto
 * Gato2 = nome: simba, idade: 6 ,cor: tigrado
 * Gato3 = nome: Jon, idade: 12, cor: amarelo
 *
@@ -18,9 +18,9 @@ import java.util.List;
 public class Ex02_OrderingList {
 
     List<Cat> gatos = new ArrayList<>(){{
-        add(new Cat("Jon", 10, "preto"));
+        add(new Cat("Jon", 12, "preto"));
         add(new Cat("Simba", 6, "trigrado"));
-        add(new Cat("Jon", 12, "amarelo"));
+        add(new Cat("Jon", 18, "amarelo"));
     }};
 
     public void showOrderingList(){
@@ -41,6 +41,20 @@ public class Ex02_OrderingList {
         Collections.sort(gatos);
         System.out.println(gatos);
 
+        System.out.println();
+        System.out.println("Ordem idade (Comparable interface):");
+        Collections.sort(gatos,new ComparatorAge());
+        System.out.println(gatos);
+
+        System.out.println();
+        System.out.println("Ordem cor (Comparable interface):");
+        gatos.sort(new ComparatorColor()); // outra forma de se fazer em relação a ordenação acima
+        System.out.println(gatos);
+
+        System.out.println();
+        System.out.println("Ordem nome, cor e idade (Comparable interface):");
+        gatos.sort(new ComparatorNameColorAge());
+        System.out.println(gatos);
 
     }
 }

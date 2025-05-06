@@ -7,9 +7,7 @@ package exercises;
 
 import java.util.*;
 
-public class ListExercise {
-
-    Scanner sc = new Scanner(System.in);
+public class Ex01_ListExercise {
 
     List<Double> notas = new ArrayList<Double>();
 

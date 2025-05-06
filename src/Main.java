@@ -1,9 +1,9 @@
-import auxiliary.AuxiliatyCaller;
+import auxiliary.AuxiliaryCaller;
 
 public class Main {
     public static void main(String[] args) {
 
-        AuxiliatyCaller auxiliatyCaller = new AuxiliatyCaller();
+        AuxiliaryCaller auxiliatyCaller = new AuxiliaryCaller();
 
         auxiliatyCaller.caller();
     }

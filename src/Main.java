@@ -1,5 +1,10 @@
+import auxiliary.AuxiliatyCaller;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        AuxiliatyCaller auxiliatyCaller = new AuxiliatyCaller();
+
+        auxiliatyCaller.caller();
     }
 }

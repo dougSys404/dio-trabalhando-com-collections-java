@@ -4,9 +4,11 @@ import exercises.list.Ex01_ListExercise;
 import exercises.list.Ex02_OrderingList;
 import exercises.list.Ex03_CalculateWeather;
 import exercises.list.Ex04_Crime;
-import exercises.map.Book;
 import exercises.map.CarConsumption;
+import exercises.map.CollectionPopulation;
+import exercises.map.DesafioDado;
 import exercises.map.SortingMap;
+
 
 import java.util.Scanner;
 
@@ -19,6 +21,8 @@ public class AuxiliaryCaller {
     Ex04_Crime listExercise04 = new Ex04_Crime();
     CarConsumption carConsumption = new CarConsumption();
     SortingMap sortingMap = new SortingMap();
+    CollectionPopulation collectionPopulation = new CollectionPopulation();
+    DesafioDado desafioDado = new DesafioDado();
 
     public void caller(){
         System.out.println("Choose: ");
@@ -62,6 +66,8 @@ public class AuxiliaryCaller {
         System.out.println("Choose:");
         System.out.println("1 - Car consumption");
         System.out.println("2 - Book Map Exercise");
+        System.out.println("3 - State Population Exercise");
+        System.out.println("4 - Block Toy Exercise");
         System.out.println("0 - Quit");
         System.out.println();
         System.out.print("Option: ");
@@ -70,6 +76,9 @@ public class AuxiliaryCaller {
         switch (option){
             case 1 -> carConsumption.getConsumption();
             case 2 -> sortingMap.showSorting();
+            case 3 -> collectionPopulation.getPopulation();
+            case 4 -> desafioDado.desafioDado();
+            default -> System.out.println("Invalid Option!");
         }
 
     }

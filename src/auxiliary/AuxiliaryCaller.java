@@ -8,6 +8,7 @@ import exercises.map.CarConsumption;
 import exercises.map.CollectionPopulation;
 import exercises.map.DesafioDado;
 import exercises.map.SortingMap;
+import exercises.set.*;
 
 
 import java.util.Scanner;
@@ -23,21 +24,28 @@ public class AuxiliaryCaller {
     SortingMap sortingMap = new SortingMap();
     CollectionPopulation collectionPopulation = new CollectionPopulation();
     DesafioDado desafioDado = new DesafioDado();
+    SetExample setExample = new SetExample();
+    SortingSetExample sortingSetExample = new SortingSetExample();
+    Exercise01 exercise01 = new Exercise01();
+    Exercise02 exercise02 = new Exercise02();
 
     public void caller(){
         System.out.println("Choose: ");
         System.out.println("1 - List Exercises");
-        System.out.println("2 - Map Exercises");
-        System.out.println("3 - Book Map Exercise");
+        System.out.println("2 - Set Exercises");
+        System.out.println("3 - Map Exercises");
+        System.out.println("4 - Stream exercices");
         System.out.println("0 - Quit");
         System.out.println();
         System.out.print("Option: ");
         int option = sc.nextInt();
 
         switch (option){
-            case 1: listCaller();
-            case 2: mapCaller();
-            case 3: sortingMap.showSorting();
+            case 1 -> listCaller();
+            case 2 -> setCaller();
+            case 3 -> mapCaller();
+            case 4 -> streamCaller();
+            default -> System.out.println("Invalid Option!");
         }
     }
 
@@ -61,6 +69,28 @@ public class AuxiliaryCaller {
         }
     }
 
+    public void setCaller(){
+        System.out.println();
+        System.out.println("Choose:");
+        System.out.println("1 - Grades");
+        System.out.println("2 - Sorting Set");
+        System.out.println("3 - Excersise 1 - Rainbow Colors");
+        System.out.println("4 - Excersise 2 - Favorite Languages");
+        System.out.println("0 - Quit");
+        System.out.println();
+        System.out.print("Option: ");
+        int option = sc.nextInt();
+
+        switch (option){
+            case 1 -> setExample.getSetExample();
+            case 2 -> sortingSetExample.getSortingSet();
+            case 3 -> exercise01.showRainbowColors();
+            case 4 -> exercise02.showFavoriteLanguages();
+            case 0 -> System.out.println("Exiting program.....");
+            default -> System.out.println("Invalid Option!");
+        }
+    }
+
     public void mapCaller(){
         System.out.println();
         System.out.println("Choose:");
@@ -80,6 +110,10 @@ public class AuxiliaryCaller {
             case 4 -> desafioDado.desafioDado();
             default -> System.out.println("Invalid Option!");
         }
+
+    }
+
+    public void streamCaller(){
 
     }
 }

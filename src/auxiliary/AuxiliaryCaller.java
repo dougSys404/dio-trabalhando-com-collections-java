@@ -9,6 +9,8 @@ import exercises.map.CollectionPopulation;
 import exercises.map.DesafioDado;
 import exercises.map.SortingMap;
 import exercises.set.*;
+import exercises.stream.MapRefactor;
+import exercises.stream.StreamApiExercise;
 
 
 import java.util.Scanner;
@@ -28,6 +30,8 @@ public class AuxiliaryCaller {
     SortingSetExample sortingSetExample = new SortingSetExample();
     Exercise01 exercise01 = new Exercise01();
     Exercise02 exercise02 = new Exercise02();
+    MapRefactor mapRefactor = new MapRefactor();
+    StreamApiExercise streamApiExercise = new StreamApiExercise();
 
     public void caller(){
         System.out.println("Choose: ");
@@ -114,6 +118,20 @@ public class AuxiliaryCaller {
     }
 
     public void streamCaller(){
+        System.out.println();
+        System.out.println("*****************STREAM API*********************");
+        System.out.println("Choose:");
+        System.out.println("1 - Map Refactor");
+        System.out.println("2 - Stream Api Exercise");
+        System.out.println("0 - Quit");
+        System.out.print("Option: ");
+        int option = sc.nextInt();
+
+        switch (option){
+            case 1 -> mapRefactor.showRefactor();
+            case 2 -> streamApiExercise.streamApiExercise();
+            case 0 -> System.out.println("Exiting program.......");
+        }
 
     }
 }
